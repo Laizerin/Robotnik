@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DirectorShow</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../styles/robotnikStyle.css">
+  <link rel="stylesheet" href="../styles/style.css">
+
+</head>
+<body>
+<!-- логотипы -->
+
+  <div class="frame">
+    <div class="director-title">Работник</div>
+    <div class="logo-vidget-container">
+    <img class="logo" src="../../img/logo.png" alt="Logo" >
+    <img class="logo-2" src="../../img/logo.png" alt="Logo" >
+     <!--Полоска виджетов-->
+
+      <!--Полоска виджетов-->
+      <div class="vidgetLine">
+      
+
+        <!-- Горизонтальное выпадающее меню с виджетами -->
+       <div class="widget-dropdown">
+         <select id="widget-select" class="horizontal">
+           <option value="widget1" >Ежедневник</option>
+           <option value="widgetChat">Чат</option>
+           <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
+         </select>
+       </div>
+
+        <!-- Горизонтальное выпадающее меню с виджетами -->
+
+   </div>
+
+  <!-- Аватарка и имя пользователя -->
+</div>
+<div class="user-profile">
+
+<img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+<img src="../../img/avatar.png" alt="Аватар пользователя" class ="avatar">
+<span class="user-name">Имя пользователя</span>
+<img src="../../img/Arrowdown.png" alt="Иконка шеврон" class="chevron-icon">
+
+</div>
+</div>
+
+ <!--Сами виджеты-->
+
+    <div class="widget-container ">
+      
+   <!--Виджет финансов-->
+
+   <div class="resizable-widget" id="widget1">
+    <div class="widget-header">
+      <span class="blockName">Ежедневник</span>
+      <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+      <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+  <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+    </div>
+    <div class="widget-content">
+      <div class="plans">
+          <ul class="plan-contents">
+            <li class="plan">
+              <h4 class="plan-title">Ремонт обшивки судна RS12H</h4>
+              <progress id="progressWhole" value="81" max="100"></progress>
+              <!-- Выполнение заказаов -->
+              <div class="center-table">
+                <table class="sub-projects">
+                  <thead>
+                    <th>Описание действия</th>
+                    <th>Срок выполнения</th>
+                    <th>Статус</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="robotnikTaskDescription">Распилить профиль на части по 2 метра, сварить их перпендикулярно друг другу, затем приварить к винту для акселерации движения</td>
+                      <td>09.09.2023</td>
+                      <td>Выполнен</td>
+                    </tr>
+    
+                    <tr>
+                      <td class="robotnikTaskDescription">Действие</td>
+                      <td>16.09.2023</td>
+                      <td>Выполняется</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+            <li class="plan">
+              <h3 class="plan-title" >Восстановление вращающей части гребного винта</h3>
+              <progress id="progressWhole" value="20" max="100"></progress>
+              <!-- Выполнение заказаов -->
+              <div class="center-table">
+                <table class="sub-projects">
+                  <thead>
+                    <th>Описание действия</th>
+                    <th>Срок выполнения</th>
+                    <th>Статус</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="robotnikTaskDescription">Действие</td>
+                      <td>09.08.2023</td>
+                      <td>Отменён</td>
+                    </tr>
+                    <tr>
+                      <td class="robotnikTaskDescription">Действие</td>
+                      <td>10.09.2023</td>
+                      <td>Выполнен</td>
+                    </tr>
+                    <tr>
+                      <td class="robotnikTaskDescription">Действие</td>
+                      <td>16.09.2023</td>
+                      <td>Выполняется</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+        </div>
+  
+    </div>
+    <div class="resize-handle"></div>
+  </div>
+
+<!--Конец контейнера виджетов -->
+  <!-- чат -->
+
+    <div class="resizable-widget" id="widgetChat">
+      <div class="widget-header">
+        <span class="blockName">Чат</span>
+        <button   type="button" class="collapse-button"><img src="../../img/CollapsButton.png" alt="Collaps"></button>
+        <button   type="button" class="uncollapse-button"><img src="../../img/UncollapsButton.png" alt="Collaps"></button>
+    <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
+      </div>
+  
+   
+        <div class="person-selector">
+          <div class="persons">
+            <button class="button person-selector-button active-person" id="john-selector">
+              <img src="../../img/avatar.png" alt="Аватар Виталия">
+              <span>Виталий Алексеевич</span>
+              <div class="unread-badge">3</div> <!-- Это серый овал с цифрой -->
+            </button>
+            <button class="button person-selector-button" id="jane-selector">
+              <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+              <span>Дмитрий Викторович</span>
+              <div class="unread-badge">53</div> 
+            </button>
+            <button class="button person-selector-button active-person" id="john-selector">
+              <img src="../../img/avatar.png" alt="Аватар Виталия">
+              <span>Иван Иванов</span>
+              <div class="unread-badge">34</div> <!-- Это серый овал с цифрой -->
+            </button>
+            <button class="button person-selector-button" id="jane-selector">
+              <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+              <span>Иван Иванов</span>
+    
+            </button>
+            <button class="button person-selector-button active-person" id="john-selector">
+              <img src="../../img/avatar.png" alt="Аватар Виталия">
+              <span>Иван Иванов</span>
+              
+            </button>
+            <button class="button person-selector-button" id="jane-selector">
+              <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+              <span>Иван Иванов</span>
+              <div class="unread-badge">4</div> 
+            </button>
+            <button class="button person-selector-button active-person" id="john-selector">
+              <img src="../../img/avatar.png" alt="Аватар Виталия">
+              <span>Иван Иванов</span>
+              <div class="unread-badge">11</div> <!-- Это серый овал с цифрой -->
+            </button>
+            <button class="button person-selector-button" id="jane-selector">
+              <img src="../../img/avatar.png" alt="Аватар Дмитрия">
+              <span>Иван Иванов</span>
+           
+            </button>
+          </div>
+  
+          <div class="chat-container">
+  
+              <div class="chat-messages">
+                <div class="message">
+                  <div class="message-avatar">
+                    <img src="../../img/avatar.png">
+                  </div>
+                  <div class="message-content">
+                    <div class="message-sender"> Виктор</div>
+                    <div class="message-text">Приветики</div>
+                    <div class="message-timestamp">19.42.42</div>
+                  </div>
+                </div>
+              </div>
+      
+              <form class="chat-input-form">
+                  <input type="text" class="chat-input" required placeholder="Введите сообщение">
+                  <button type="submit" class="button send-button">Отправить</button>
+              </form>
+   
+          </div>
+     
+    </div>
+      <div class="resize-handle"></div>
+    </div>
+  </div>
+ 
+<!--Конец чата-->
+<!--Футор-->
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="../../img/logo.png" alt="Логотип">
+    </div>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Услуги</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <!-- <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a> -->
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2023. Все права защищены.</p>
+  </div>
+</div>
+<!--Футор-->
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../scripts/robotinkScript.js" ></script>
+<script src="../scripts/chatScript.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css"rel="stylesheet" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<!-- <script src="scripts/WorkshopTask.js"></script>  -->
+</html>
