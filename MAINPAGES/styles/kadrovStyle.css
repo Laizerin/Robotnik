@@ -1,0 +1,1509 @@
+.resizable-widget {
+  position: relative;
+
+  /*position: absolute;*/
+  margin-right: 10px;
+  min-height: 300px;
+  min-width: 400px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  z-index: 1;
+}
+
+
+.widget-container {
+  position: relative;
+
+  align-items: flex-start;
+  padding: 10px;
+  display: grid;
+
+
+}
+
+#widget1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+#widget3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#widget2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#widget4 {
+  grid-column: 1;
+  grid-row: 3;
+
+}
+
+#widgetChat {
+  grid-column: 2;
+  grid-row: 3;
+}
+.resizable-widget:hover {
+  /* transform: scale(1.01); */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Стиль для заголовка виджета */
+.widget-header {
+  background-color: #b9d5f1;
+  padding: 8px;
+  cursor: move;
+  display: flex;
+  justify-content: flex-end; /* Изменяем выравнивание на правое */
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+}
+
+/* Обновленные стили для кнопки закрытия */
+.close-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px; /* Изменяем отступ с левой стороны */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button img {
+  width: 44px;
+  height: 24px;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+}
+.collapse-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px; /* Изменяем отступ с левой стороны */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.collapse-button img {
+  width: 30px;
+  height: 24px;
+}
+
+.collapse-button:hover {
+  transform: scale(1.2);
+}
+
+.uncollapse-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 10px; /* Изменяем отступ с левой стороны */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.uncollapse-button img {
+  width: 30px;
+  height: 24px;
+}
+
+.uncollapse-button:hover {
+  transform: scale(1.2);
+}
+
+
+/* Стили для нижней панели управления виджетом */
+.widget-images-panel {
+  background-color: #010508;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  margin-top: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.widget-images-panel img {
+  width: 24px;
+  height: 24px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.widget-images-panel img:hover {
+  transform: scale(1.2);
+}
+  .resize-handle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    cursor: nwse-resize; /* Resize cursor */
+    background-color: #000;
+  }
+
+
+  .widget-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 150px;
+    padding: 10px;
+  }
+  
+
+  .resizable-widget {
+    display: none;
+  }
+  
+  .active-widget {
+    display: block;
+  }
+
+  /* Стилизация таблицы */
+  .widget-columns {
+    display: flex;
+    padding: 10px;
+    width: 98%;
+    height: 98%;
+  }
+  
+  .widget-table-column {
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .widget-table {
+    font-family: "RobotoFlex", sans-serif;
+    font-size: 16px;
+    color: #242222;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .widget-table th,
+  .widget-table td {
+    padding: 12px 16px;
+    text-align: center;
+  }
+  
+  .widget-table th {
+    position: relative;
+  }
+  
+  .widget-table th::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+  }
+  
+  .widget-table th:nth-child(1),
+  .widget-table td:nth-child(1) {
+    width: 20px;
+  }
+  
+  .widget-table th:nth-child(2),
+  .widget-table td:nth-child(2) {
+    width: 120px;
+  }
+  
+  .widget-table tbody tr {
+    border-bottom: 1px solid #d1d1d1;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .widget-table tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .widget-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .widget-table th,
+  .widget-table td {
+    border: none;
+  }
+  
+  .widget-table td.green-row {
+    background-color: #e6f3ec;
+  }
+  
+  .widget-table td.highlight {
+    position: relative;
+  }
+  
+
+  .widget-table tr.red-row {
+    background-color: #fca3a3;
+  }
+
+
+
+
+.highlight-yellow span {
+  display: inline-block;
+  background-color: rgb(242, 250, 136);
+  padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
+  margin: 0;
+  border-radius: 5px;
+}
+.highlight-green span {
+  display: inline-block;
+  background-color: rgb(57, 247, 130);
+  padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
+  margin: 0;
+  border-radius: 5px;
+}
+.highlight-red span {
+  display: inline-block;
+  background-color: rgb(247, 127, 127);
+  padding: 2px 6px; /* Подберите отступы по вашему усмотрению */
+  margin: 0;
+  border-radius: 5px;
+}
+  .red-row {
+    background-color: rgb(238, 13, 13);
+  }
+  
+  .green-row {
+    background-color: rgb(161, 245, 161);
+    border-radius: 2px;
+  }
+  
+  .yellow-row {
+    background-color: rgb(252, 252, 168);
+  }
+
+  
+
+  .widget-columns {
+    display: flex;
+    padding: 10px;
+    width: 98%;
+    height: 98%;
+  }
+  
+  .widget-table-column {
+    width: 100%;
+    overflow: auto; /* Добавляем прокрутку при необходимости */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Скругление углов */
+    border: 1px solid #ccc; /* Обводка */
+    height: 80%; /* Добавляем высоту 100% */
+    
+
+  }
+  
+  .widget-text-column {
+    width: 39%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #d1d1d1;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+
+  /* //Выпадающая панель """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+   */
+  .widget-text-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .widget-text-top {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .widget-text-top h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .widget-text-content {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.4;
+  }
+  
+  .widget-text-bottom {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .file-panel {
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #d1d1d1;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .file-panel h4 {
+    font-size: 16px;
+  }
+  
+  .file-panel img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .widget-images-panel {
+    width: flex;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Анимации */
+    transform: translateY(0); /* Начальное состояние */
+  }
+  
+  .widget-images-panel:hover {
+    transform: translateY(-3px); /* Изменение положения при наведении */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .file-panel {
+    width: 100%;
+    text-align: left;
+  }
+
+
+  .chat-widget-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    display: none;
+  }
+
+  .chat-widget {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    border-radius:  10px;
+    position: relative;
+  }
+
+    
+  .chat-header {
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0Px; /* Уменьшаем вертикальный отступ */
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-content {
+    padding: 10px;
+    
+  }
+  
+  .chat-widget-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block; /* По умолчанию иконка видна */
+  }
+
+.chat-icon{
+
+ width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: block;
+}
+
+/* Стили для скрытия чата */
+.chat-widget-container .chat-widget {
+  display: none;
+}
+
+.chat-widget-container.active .chat-widget {
+  display: block;
+}
+/* """"""""""""Блок чата"""""""""""""""""""" */
+
+.chat-widget-container {
+
+  height: 10%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-widget {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-content {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.messages-list {
+  list-style: none;
+  padding: 0;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px; 
+}
+
+.user {
+  border-radius: 10px;
+  background-color: #94f7c6;
+  align-self: flex-end;
+  display: inline-block;
+}
+
+.bot {
+  border-radius: 10px;
+  background-color: #e0dde0;
+  align-self: flex-start;
+  display: inline-block;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+}
+
+#messageInput {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+#sendButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.chat-widget-toggle {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.message {
+  display: flex;
+  align-items: flex-end;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.user .avatar {
+  margin-left: 10px;
+  margin-left: auto;
+}
+
+.bot .avatar {
+  margin-right: 10px;
+
+  margin-right: auto;
+}
+
+
+
+/* Стиль сообщений, полученных от других пользователей */
+.message-content.message-user {
+  background-color: #94f7c6;
+}
+
+/* Стиль сообщений, полученных от других пользователей */
+.message-content:not(.message-user) {
+  max-width: 99%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@keyframes messageWidthAnimation {
+  from {
+    max-width: 100%; /* Исходная ширина сообщения */
+  }
+  to {
+    max-width: 70%; /* Суженная ширина сообщения */
+  }
+}
+
+
+
+
+/* """"""""""""Виджет цехов"""""""""""""""""""" */
+.equipmentIcon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+
+
+/* Медиа-запрос для адаптивной ширины equipmentIcon */
+
+.lineOfEquipment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  overflow: scroll;
+  gap: 55px;
+  width: 90%;
+  justify-content: flex-start;
+}
+
+.rightLineOfEquipment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 55px;
+  width: 90%;
+  justify-content: flex-end;
+}
+
+.centerLineOfEquipment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 55px;
+  width: 90%;
+  justify-content: center;
+}
+
+.TsekhMap {
+  width: 90%;
+  padding: 20px;
+  max-height: 400px; /* Максимальная высота контейнера */
+  overflow-y: auto; /* Вертикальная прокрутка при необходимости */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.backGround-color-red{
+  background-color: #FB6161;
+}
+
+.backGround-color-yellow{
+  background-color: #FEF406;
+}
+
+.backGround-color-green{
+  background-color: #71DC7B;
+}
+
+.backGround-color-grey{
+  background-color: #EBE7E7;
+}
+.blockName {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  margin-right: auto;
+  color: #444343;
+}
+
+/* Мтили карты цехов */
+.factory-map {
+  width: 97%;
+  height: 50vh;
+  padding: 10px;
+  border: 1px solid #e0dde0;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Создает автоматическую сетку с минимальной шириной элемента 200px */
+  gap: 20px; /* Расстояние между элементами */
+  justify-content: space-between;
+  overflow: scroll;
+}
+.workshop {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #222222; /* Добавляем обводку */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.workshop:hover {
+  background-color: #bebebe;
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.workshop-name {
+  align-self: flex-start;
+  margin-bottom: 5px;
+}
+.workshop-info {
+  font-size: 12px;
+  align-self: center;
+}
+.widget-content{
+  padding: 10px;
+}
+
+
+/* """"""""""""Виджет сотрудников"""""""""""""""""""" */
+
+.WorkersBlock {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#myTableWorker {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#myTableWorker th,
+#myTableWorker td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#myTableWorker th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#myTableWorker th:hover {
+  background-color: #d0d0d0;
+}
+
+.imgCircle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.imgCircle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.WorkersBlock span {
+  vertical-align: middle;
+}
+
+.WorkersBlock td {
+  border-left: none;
+  border-right: none;
+}
+
+.WorkersBlock tr:last-child td {
+  border-bottom: none;
+}
+
+.WorkersBlock td:last-child {
+  border-right: none;
+}
+
+.WorkersBlock tbody tr[data-target]:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/*№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№№ Стили панели виджетов*№№№№№№№№№№№№№№№№№№№*/
+/* План выполнения заказов */
+
+.container {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  margin-bottom: 60px;
+  overflow: hidden;
+
+}
+
+/* Стиль для заголовков с тенью */
+
+
+.workshop-title1 {
+  height: 10px; /* Устанавливаем высоту 40px */
+  font-size: 14px;
+
+  margin-bottom: 0; /* Убираем нижний отступ */
+}
+
+.projects1 {
+  /* ... остальные стили ... */
+  margin-top: 0; /* Убираем верхний отступ */
+  overflow: scroll;
+}
+.active {
+  background-color: #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при активации */
+}
+
+/* Стили для списков и подсписков */
+.projects1, .sub-projects1, .sub-task-projects1 {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+}
+
+/* Стиль для элементов задач */
+.TaskWorkShopTask {
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.GreenTask {
+  background-color: #d0f3d0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.BlueInfo {
+  background-color: #cce0ff;
+}
+
+.YellowTask {
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.RedTask {
+  background-color: #fdd4d4;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для описания задач и даты выполнения */
+.tasks-info, .task-info {
+  list-style: none;
+  padding-left: 20px;
+  display: none;
+  margin-top: 5px;
+}
+
+.GrayInfo {
+  background-color: #f2f2f2;
+}
+
+.user-row {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar img {
+  padding-top: 5px;
+  width: 40px; /* Размер аватарки */
+  height: 40px;
+  border-radius: 50%; /* Для создания круглой аватарки */
+  justify-content: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  color: #000000;
+
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; 
+}
+.user-id {
+  margin: 0;
+  font-size: 14px;
+  color: #000000; /* Серый цвет для табельного номера */
+}
+.with-margin {
+  margin-right: 10px; /* Добавляем отступ справа 10 пикселей */
+}
+.icon-and-text {
+  display: flex;
+  align-items: center;
+  height: 10px; /* Устанавливаем высоту 20px */
+}
+
+.icon-and-text img {
+  margin-right: 10px; /* Отступ между иконкой и надписью */
+}
+
+.TaskBasicText.icon-text {
+  font-size: 16px;
+  margin: 0; /* Убираем отступы по умолчанию у параграфа */
+
+}
+.TaskBasicText.Brigade-text {
+  font-size: 16px;
+  margin: 0; /* Убираем отступы по умолчанию у параграфа */
+  align-items: right;
+}
+
+.arrow-picture {
+  width: 20px; /* Устанавливаем ширину 20px */
+  height: 10px; /* Устанавливаем высоту 10px */
+} /* Устанавливаем высоту 20px */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 520px; /* Добавьте нужный вам отступ слева */
+}
+
+.frame {
+  background-color: #ffffff;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+
+.logo-vidget-container {
+  display: flex; /* Включаем flex контейнер для логотипов */
+  align-items: center; /* Выравниваем их по вертикали */
+}
+
+.user-profile {
+  display: flex; /* Включаем flex контейнер для .user-profile */
+  align-items: center;
+  padding-right: 80px;
+   /* Выравниваем по вертикали по центру */
+}
+
+.director-title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px; /* Размер шрифта */
+  font-weight: bold; /* Жирный шрифт */
+  color: #505050; /* Цвет текста */
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); /* Тень текста */
+
+}
+
+/* """""""""""""""""""""""""""""Стили планов""""""""""""""""""""""""""""""""""""""""" */
+.plans {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  height: 99%;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plan-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  padding: 120px;
+  margin-bottom: 20px;
+}
+
+.plan-title {
+  margin: 0;
+  font-size: 24px;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.plan-title:hover {
+  color: #768efa; /* Измените цвет по вашему желанию */
+}
+
+#progressWhole{
+  display:inline-block;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.progress-bar, .sub-progress-bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+}
+
+.sub-progress-bar {
+  background-color: #71DC7B;
+}
+
+.progress-value, .sub-progress-value {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #555555;
+}
+
+.center-table{
+  display: flex;
+  justify-content: center;
+}
+
+.sub-projects {
+  width: 100%;
+  margin:auto;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333333;
+  display: none;
+  border-collapse: collapse;
+}
+
+.sub-projects th, .sub-projects td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sub-projects th {
+  font-weight: bold;
+}
+
+.sub-projects td:last-child {
+  text-align: center;
+}
+.sub-projects .active{
+  display: table;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.visible {
+  display: table;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.robotnikTaskDescription{
+  max-width: 300px; 
+  text-align: justify;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.plan {
+  margin-bottom: 20px; /* Добавляем нижний отступ для отступа от панели */
+  text-align: center;
+}
+
+#draggableHeader {
+  cursor: grab;
+}
+.director-title {
+  text-align: center; /* Выравнивание текста по центру */
+  font-size: 24px; /* Размер шрифта, который вы можете настроить */
+  font-weight: bold; /* Жирный шрифт, если нужно */
+  margin-top: 20px; /* Расстояние от верхней границы */
+}
+.footer {
+  background-color: #b9d5f1;
+  color: #555; /* Темно-серый текст */
+  padding: 40px 0;
+  border-top-left-radius: 5px; /* Скругление верхних углов */
+  border-top-right-radius: 5px;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2); /* Тень внизу */
+  transition: background-color 0.3s ease-in-out; /* Анимация смены цвета фона */
+}
+
+.footer:hover {
+  background-color: #8ac3fc; /* Новый цвет фона при наведении */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  width: 100px;
+  height: auto;
+  border-radius: 10px; /* Скругление углов логотипа */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out; /* Анимация смены цвета текста ссылок */
+}
+
+.footer-links a:hover {
+  color: #f1f1f1; /* Новый цвет текста ссылок при наведении */
+}
+
+.footer-social .social-icon {
+  display: inline-block;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out; /* Анимация при наведении на иконки соц. сетей */
+}
+
+.footer-social .social-icon:hover {
+  transform: scale(1.1); /* Увеличение иконки при наведении */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+
+.workshop-title1,
+.projects_name_list,
+.TaskWorkShopTask.tasks_name_list {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Добавляем плавные переходы */
+  border-radius: 5px; /* Добавляем скругление углов */
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: separate; /* Убираем сетку */
+  border-spacing: 0; /* Убираем промежутки между ячейками */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+  border-radius: 5px; /* Добавляем скругление углов */
+}
+
+.employee-table th,
+.employee-table td {
+  border-bottom: 1px solid #ccc; 
+  padding: 8px;
+  text-align: center;
+}
+
+.employee-table th {
+  background-color: #f2f2f2;
+}
+
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Устанавливаем для body минимальную высоту, чтобы футер всегда был внизу */
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Оставляем flex-контейнеру футера свободное пространство внизу и уменьшаем высоту футера */
+.footer {
+  bottom: 0;
+  position: flex;
+  margin-top: auto;
+  height: 200px;
+  width: 100%;
+}
+
+/*Chat */
+
+.persons{
+  display: block;
+  max-width: 100%; /* Максимальная ширина для .persons */
+  width: 100%; /* Заполняем всю доступную ширину родительского элемента */
+  min-width: 0; 
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow-y: scroll;
+  min-width: 250px;
+}
+
+.person-selector {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 15px auto 25px 25px;
+  max-width: 100%;
+  width: 99%;
+}
+.persons button {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  max-width: 95%;
+  text-align: left;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  color: #666666;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative; /* Добавляем относительное позиционирование для позиционирования точки */
+}
+.persons button img {
+  width: 40px; /* Размер аватарки, который вам подходит */
+  height: 40px; /* Размер аватарки, который вам подходит */
+  margin-right: 10px; /* Расстояние между аватаркой и именем */
+}
+.unread-badge {
+  margin-left: 45px;
+  background-color: #ccc; /* Цвет серого овала */
+  color: #fff;
+  border-radius: 30%; /* Делаем овал круглым */
+  width: 20px; /* Размер овала (можно изменить) */
+  height: 20px; /* Размер овала (можно изменить) */
+  font-size: 12px; /* Размер шрифта внутри овала (можно изменить) */
+  position: absolute;
+/* Располагаем овал по вертикали по середине кнопки */
+  right: 10px; /* Отодвигаем овал от правого края кнопки */
+
+  transform: translateX(30%); /* Корректируем положение овала по вертикали */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  border: none;
+  padding: 0.625em;
+  border-radius: 5Px;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(2px);
+}
+
+
+.person-selector-button {
+  width: 100%;
+  background-color: #3498db; /* Голубой для кнопок */
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.active-person {
+  background: #08529d;
+}
+
+.chat-container {
+  background: #fff; /* Белый фон контейнера */
+  font-family: 'Roboto', sans-serif;
+  border-radius: 15px; /* Увеличим радиус закругления углов для более мягкого вида */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+  margin: auto;
+  width: 99%; /* Ширина контейнера относительно родительского элемента */
+  max-width: 800px; /* Максимальная ширина контейнера */
+  height: 600px;
+  padding: 20px; /* Добавим немного внутренних отступов для контента */
+}
+.chat-header {
+  margin-bottom: 1em;
+  color: #636363;
+}
+
+.chat-header h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.chat-messages {
+  color: #414040;
+  margin-top: 10px;
+  height: 400px;
+  overflow-y: scroll;
+  padding: 10px; /* Добавим внутренние отступы для контейнера сообщений */
+}
+
+.message {
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+  align-items: flex-end; /* Выравнивание по нижнему краю */
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 5px; /* Отступ снизу для аватарки */
+}
+
+.message-content {
+  min-height: 40px;
+  flex-grow: 1;
+  width: 100%;
+  background-color: #f5f5f5; /* Цвет фона сообщения */
+  border-radius: 15px;
+  padding: 15px; /* Увеличим внутренние отступы для увеличения высоты */
+  margin-bottom: 6px; /* Увеличим нижний отступ для отделения сообщений */
+  position: relative;
+  word-wrap: break-word;
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 5px;
+  position: absolute;
+  top: 5px;
+  left:  9px;
+}
+
+.message-text {
+  margin-top: 20px;
+  color: #5a5a5a;
+  font-size: 1em;
+  text-align: left; /* Выравнивание текста по центру */
+}
+.message-timestamp {
+  font-size: 0.75em;
+  text-align: right;
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.from-me .message-content {
+  min-height: 30px;
+  flex-grow: 1;
+  width: 100%;
+  background-color: #d1f7d1; /* Зеленоватый фон для Виталия */
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 6px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+
+/* Добавим стили для аватарки, чтобы она выглядела более похожей на Telegram */
+.message-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.message-partner {
+  background-color: #f0f0f0; /* Цвет фона для сообщений партнера */
+  color: #333; /* Цвет текста для сообщений партнера */
+}
+.chat-input-form {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  gap: 0.625em;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.chat-input {
+  padding: 0.625em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 1em;
+  flex-grow: 1;
+}
+
+.send-button {
+  background-color: #1c9bef;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.clear-chat-button {
+  display: block;
+  margin: 2.5em auto;
+}
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: right; /* Выравнивание текста отправителя справа */
+  color: blue; /* Цвет текста отправителя */
+}
+
+#widgetChat.resizable-widget {
+  /* Ваши стили для виджета с id "widgetChat" */
+  width: 50%; /* Например, уменьшим ширину до половины */
+  min-width: 880px;
+  height: 60%;
+  min-height: 680px;
+  /* Другие стили по вашему выбору */
+}
+
+/* Раскрытие скрытие виджетов*/
+.resizable-widget.expanded {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height:  100%;
+  z-index: 99; /* Устанавливаем виджет поверх остальных элементов */
+  margin-top: 70px;
+  max-height: calc(100% - 360px);
+  margin-left: 10px;
+  max-width: calc(100% - 10px);
+  transform: none; /* Убираем трансформацию */
+}
