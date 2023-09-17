@@ -1,0 +1,559 @@
+<data>
+
+<employeeList>
+ <workshopName>Отдел бухгалтерского учета</workshopName> <!-- Изменено название -->
+<brigadeList>
+    <brigadeText>Главная бухгалтерия</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <name>секретарь-референт</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+            <reward>30000</reward>
+        </employee>
+
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+            <reward>10000</reward>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+            <reward>10000</reward>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>10000</reward>
+        </employee>
+         <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+             <reward>10000</reward>
+        </employee>
+        <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>10000</reward>
+        </employee>
+        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
+    </employees>
+</brigadeList>
+<brigadeList>
+      <brigadeText>Главная бухгалтерия</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+      <employees>
+        <employee>
+            <name>секретарь-референт</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+            <reward>35000</reward>
+        </employee>
+
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+            <reward>10000</reward>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+            <reward>10000</reward>
+        </employee>
+        <employee>
+            <name>Главная бухгалтерия. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>10000</reward>
+        </employee>
+         <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+             <reward>10000</reward>
+        </employee>
+        <employee>
+            <name>Бухгалтерский отдел БКЦ. Специалист</name>
+            <status >Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>10000</reward>
+        </employee>
+        <!-- Добавьте остальных сотрудников здесь как новые элементы employee -->
+    </employees>
+    </brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Отдел развития(модернизации)			
+</workshopName> 
+<brigadeList>
+    
+<brigadeText>Отдел кадров</brigadeText>
+<brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+<employees>
+    <employee>
+        <name>Начальник отдела</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 16</employeeID>
+        <reward>100000</reward>
+    </employee>
+    <employee>
+        <name>Специалист отдела кадров</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 17</employeeID>
+        <reward>60000</reward>
+    </employee>
+    <employee>
+        <name>Специалист отдела кадров</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 18</employeeID>
+        <reward>10000</reward>
+    </employee>
+    <employee>
+        <name>Специалист отдела кадров</name>
+        <status>Работает</status>
+        <employeeID>Табельный номер 19</employeeID>
+        <reward>10000</reward>
+    </employee>
+</employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел профессиональной подготовки</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник отдела</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 20</employeeID>
+            <reward>100000</reward>
+        </employee>
+        <employee>
+            <name>Специалист отдела профессиональной подготовки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 21</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Специалист отдела профессиональной подготовки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 22</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Специалист отдела профессиональной подготовки</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 23</employeeID>
+            <reward>25000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Руководитель проекта развития</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Руководитель проекта развития</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 24</employeeID>
+            <reward>80000</reward>
+        </employee>
+        <employee>
+            <name>Руководитель проекта развития</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 25</employeeID>
+            <reward>75000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+
+
+
+<employeeList>
+<workshopName>Производство</workshopName> 
+ <brigadeList>
+    <brigadeText>Отдел производства</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 5</brigadeCount>
+    <employees>
+     <employee>
+            <name>Директор  судостроения</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 26</employeeID>
+            <reward>150000</reward>
+        </employee>
+        <employee>
+            <name>Заместитель директора по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 26</employeeID>
+            <reward>80000</reward>
+        </employee>
+        <employee>
+            <name>Секретарь БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 27</employeeID>
+            <reward>40000</reward>
+        </employee>
+        <employee>
+            <name>Табельщик БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 28</employeeID>
+            <reward>13000</reward>
+        </employee>
+        <employee>
+            <name>Специалист архива РКиТД БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 29</employeeID>
+            <reward>11000</reward>
+        </employee>
+        <employee>
+            <name>Специалист архива РКиТД БКЦ</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 30</employeeID>
+            <reward>11000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+<brigadeList>
+    <brigadeText>Производственно-диспетчерский отдел по судостроению</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 7</brigadeCount>
+    <employees>
+        <employee>
+            <name>Начальник отдела</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 31</employeeID>
+            <reward>90000</reward>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 32</employeeID>
+            <reward>23000</reward>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 33</employeeID>
+            <reward>23000</reward>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 34</employeeID>
+            <reward>23000</reward>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 35</employeeID>
+            <reward>23000</reward>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 36</employeeID>
+            <reward>24000</reward>
+        </employee>
+        <employee>
+            <name>Диспетчер ПДО по судостроению</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 37</employeeID>
+            <reward>23000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Отдел Судоремонта		
+</workshopName> 
+<brigadeList>
+    <brigadeText>Производственно-диспетчерский отдел по судоремонту. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+    <employees>
+        <employee>
+            <name>Производственно-диспетчерский отдел по судоремонту. Специалист-диспетчер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 1</employeeID>
+            <reward>32000</reward>
+        </employee>
+        <employee>
+            <name>Производственно-диспетчерский отдел по судоремонту. Специалист-диспетчер</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 2</employeeID>
+            <reward>31000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел эксплуатации наземного транспорта. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 3</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел эксплуатации наземного транспорта. Табельщик</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 3</employeeID>
+            <reward>14000</reward>
+        </employee>
+        <employee>
+            <name>Отдел эксплуатации наземного транспорта. Специалист-диспетчер по транспорту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 4</employeeID>
+            <reward>24000</reward>
+        </employee>
+        <employee>
+            <name>Отдел эксплуатации наземного транспорта. Специалист-диспетчер по транспорту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>24000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Отдел эксплуатации флота. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел эксплуатации флота. Специалист-диспетчер по флоту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 6</employeeID>
+            <reward>35000</reward>
+        </employee>
+        <employee>
+            <name>Отдел эксплуатации флота. Специалист-диспетчер по флоту</name>
+            <status>Работает</status>
+            <employeeID>Табельный номер 7</employeeID>
+            <reward>35000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+
+<employeeList>
+<workshopName>Отдел Безопасности
+</workshopName> 
+<brigadeList>
+    <brigadeText>Отдел режима и защиты информации. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 2</brigadeCount>
+    <employees>
+        <employee>
+            <name>Отдел режима и защиты информации. Специалист отдела режима</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+            <reward>15000</reward>
+        </employee>
+        <employee>
+            <name>Отдел режима и защиты информации. Специалист отдела режима</name>
+            <status>Работает</status>
+              <employeeID>Табельный номер 7</employeeID>
+            <reward>15000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Экономика и финансы</workshopName> 
+<brigadeList>
+    <brigadeText>Финансово-экономический отдел. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 4</brigadeCount>
+    <employees>
+        <employee>
+            <name>Финансово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Финансово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Финансово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Планово-экономический отдел. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 6</brigadeCount>
+    <employees>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>25000</reward>
+        </employee>
+        <employee>
+            <name>Планово-экономический отдел. Специалист-экономист</name>
+            <status>Работает</status>
+             <employeeID>Табельный номер 7</employeeID>
+            <reward>20000</reward>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+
+<employeeList>
+<workshopName>Технический отдел</workshopName> 
+<brigadeList>
+    <brigadeText>Конструкторско-технологический отдел. Начальник отдела</brigadeText>
+    <brigadeCount>Количество сотрудников в отделе: 6</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 1</employeeID>
+            <reward>30000</reward>
+            <name>Инженер-конструктор 3D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <reward>30000</reward>
+            <name>Инженер-конструктор 3D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <reward>30000</reward>
+            <name>Инженер-конструктор 3D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <reward>20000</reward>
+            <name>Инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>20000</reward>
+            <name>Инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 6</employeeID>
+            <reward>20000</reward>
+            <name>Инженер-конструктор 2D</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+
+<employeeList>
+<workshopName>Инженерный отдел отдел</workshopName> 
+
+
+<brigadeList>
+    <brigadeText>Участок инженерных сетей и насосных станций</brigadeText>
+    <brigadeCount>Количество сотрудников в участке: 1</brigadeCount>
+    <employees>
+    
+      <employee>
+            <employeeID>Табельный номер 2</employeeID>
+            <reward>70000</reward>
+            <name>Заместитель Главного энергетика</name>
+            <status>Работает</status>
+        </employee>
+           <employee>
+            <employeeID>Табельный номер 1</employeeID>
+               <reward>120000</reward>
+            <name>Главный энергетик</name>
+            <status>Работает</status>
+        </employee>
+        <employee>
+            <employeeID>Табельный номер 3</employeeID>
+            <reward>30000</reward>
+            <name>Специалист. Терминал ТОиР</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Энергетическая служба</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 4</employeeID>
+            <reward>25000</reward>
+            <name>Специалист. Терминал  АСКУЭ/АСТУЭ</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+
+<brigadeList>
+    <brigadeText>Энергетическая служба БКЦ</brigadeText>
+    <brigadeCount>Количество сотрудников в службе: 1</brigadeCount>
+    <employees>
+        <employee>
+            <employeeID>Табельный номер 5</employeeID>
+            <reward>32500</reward>
+            <name>Специалист. Терминал РАСКУЭ/АСТУЭ</name>
+            <status>Работает</status>
+        </employee>
+    </employees>
+</brigadeList>
+</employeeList>
+<workshops>
+  <workshop class="backGround-color-yellow">
+    <workshopName>Цех 1</workshopName>
+    <workshopInfo>Выполнено: 75%</workshopInfo>
+  </workshop>
+  <workshop class="backGround-color-red">
+    <workshopName>Цех 2</workshopName>
+    <workshopInfo>Выполнено: 50%</workshopInfo>
+  </workshop>
+  <workshop class="backGround-color-green">
+    <workshopName>Цех 3</workshopName>
+    <workshopInfo>Выполнено: 90%</workshopInfo>
+  </workshop>
+ </workshops> 
+ </data>
+
+
+

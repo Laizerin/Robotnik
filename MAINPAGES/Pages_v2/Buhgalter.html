@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>DirectorShow</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../styles/buhgalterStyle.css" rel="stylesheet"/>
+<link href="../styles/style.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- логотипы -->
+<div class="frame">
+<div class="director-title">Отдел кадров</div>
+<div class="logo-vidget-container">
+<img alt="Logo" class="logo" src="../../img/logo.png"/>
+<img alt="Logo" class="logo-2" src="../../img/logo.png"/>
+<!--Полоска виджетов-->
+<!--Полоска виджетов-->
+<div class="vidgetLine">
+<!-- Горизонтальное выпадающее меню с виджетами -->
+<div class="widget-dropdown">
+<select class="horizontal" id="widget-select">
+<option value="widget1">Ежедневник</option>
+<option value="widget2">Список сотрудников</option>
+<option value="widgetChat">Чат</option>
+<!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
+</select>
+</div>
+<!-- Горизонтальное выпадающее меню с виджетами -->
+</div>
+<!-- Аватарка и имя пользователя -->
+</div>
+<div class="user-profile">
+<img alt="Иконка настроек" class="settings-icon" src="../../img/settings_2.png"/>
+<img alt="Аватар пользователя" class="avatar" src="../../img/avatar.png"/>
+<span class="user-name">Имя пользователя</span>
+<img alt="Иконка шеврон" class="chevron-icon" src="../../img/Arrowdown.png"/>
+</div>
+</div>
+<!--Сами виджеты-->
+<div class="widget-container">
+<!--Виджет финансов-->
+<div class="resizable-widget active-widget" id="widget1">
+<div class="widget-header">
+<span class="blockName">Ежедневник</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+<button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+</div>
+<div class="widget-columns">
+<div class="widget-table-column">
+<table class="widget-table">
+<thead>
+<tr>
+<th></th>
+<th>Кому</th>
+<th>От кого</th>
+<th>Статус</th>
+<th>Дата</th>
+<th>Тип</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><input type="checkbox"/></td>
+<td>Директору</td>
+<td>Перв. Зам</td>
+<td class="highlight-green"><span>Активно</span></td>
+<td>01.01.01</td>
+<td>Служебная</td>
+</tr>
+<!-- <tr  class="green-row"> -->
+<tr>
+<td><input type="checkbox"/></td>
+<td>Перв. зам</td>
+<td>Директор</td>
+<td class="highlight-yellow"><span>Не активно</span></td>
+<td>02.01.01</td>
+<td>Поручение</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>Перв. зам</td>
+<td>Директор</td>
+<td class="highlight-green"><span>Aктивно</span></td>
+<td>02.01.01</td>
+<td>Поручение</td>
+</tr>
+<tr>
+<td><input type="checkbox"/></td>
+<td>Перв. зам</td>
+<td>Директор</td>
+<td class="highlight-red"><span>Не активно</span></td>
+<td>02.01.01</td>
+<td>Поручение</td>
+</tr>
+<!-- Добавьте другие строки с данными -->
+</tbody>
+</table>
+</div>
+<div class="widget-text-column" id="widgetTextColumn">
+<div class="widget-text-top">
+<h4 id="panelTitle">Заголовок</h4>
+<p id="panelContent">Содержимое...</p>
+</div>
+<div class="widget-text-bottom">
+<div class="file-panel">
+<h4>Файл</h4>
+<img alt="pdf" src="your-image-path.png">
+</img></div>
+</div>
+</div>
+</div>
+<!--нижняя панель управления виджетом-->
+<!-- <div class="widget-images-panel">
+        <img src="../../img/settings_2.png" alt="Иконка настроек" class="settings-icon">
+        <img src="../../img/planirovanie.png" alt="Иконка настроек" class="settings-icon">
+        <img src="../../img/proizvodstvo.png" alt="Иконка настроек" class="settings-icon">
+        <img src="../../img/phone.svg" alt="Иконка настроек" class="settings-icon">
+         <img src="../../img/search.png" alt="Иконка настроек" class="settings-icon">
+      </div> -->
+<div class="resize-handle"></div>
+</div>
+<div class="resizable-widget active-widget" id="widget2">
+<div class="widget-header">
+<span class="blockName">Список сотрудников</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+<button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+</div>
+<div class="container">
+<div class="resize-handle"></div>
+<div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Отдел бухгалтерского учета</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Главная бухгалтерия</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>секретарь-референт</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td><td>30000</td></tr><tr class="person-row"><td>Главная бухгалтерия. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td><td>10000</td></tr><tr class="person-row"><td>Главная бухгалтерия. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td><td>10000</td></tr><tr class="person-row"><td>Главная бухгалтерия. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>10000</td></tr><tr class="person-row"><td>Бухгалтерский отдел БКЦ. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>10000</td></tr><tr class="person-row"><td>Бухгалтерский отдел БКЦ. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>10000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Главная бухгалтерия</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>секретарь-референт</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td><td>35000</td></tr><tr class="person-row"><td>Главная бухгалтерия. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td><td>10000</td></tr><tr class="person-row"><td>Главная бухгалтерия. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td><td>10000</td></tr><tr class="person-row"><td>Главная бухгалтерия. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>10000</td></tr><tr class="person-row"><td>Бухгалтерский отдел БКЦ. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>10000</td></tr><tr class="person-row"><td>Бухгалтерский отдел БКЦ. Специалист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>10000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Отдел развития(модернизации)			
+</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел кадров</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 4</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Начальник отдела</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 16</td><td>100000</td></tr><tr class="person-row"><td>Специалист отдела кадров</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 17</td><td>60000</td></tr><tr class="person-row"><td>Специалист отдела кадров</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 18</td><td>10000</td></tr><tr class="person-row"><td>Специалист отдела кадров</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 19</td><td>10000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел профессиональной подготовки</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 4</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Начальник отдела</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 20</td><td>100000</td></tr><tr class="person-row"><td>Специалист отдела профессиональной подготовки</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 21</td><td>25000</td></tr><tr class="person-row"><td>Специалист отдела профессиональной подготовки</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 22</td><td>25000</td></tr><tr class="person-row"><td>Специалист отдела профессиональной подготовки</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 23</td><td>25000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Руководитель проекта развития</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 2</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Руководитель проекта развития</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 24</td><td>80000</td></tr><tr class="person-row"><td>Руководитель проекта развития</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 25</td><td>75000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Производство</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел производства</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 5</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Директор  судостроения</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 26</td><td>150000</td></tr><tr class="person-row"><td>Заместитель директора по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 26</td><td>80000</td></tr><tr class="person-row"><td>Секретарь БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 27</td><td>40000</td></tr><tr class="person-row"><td>Табельщик БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 28</td><td>13000</td></tr><tr class="person-row"><td>Специалист архива РКиТД БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 29</td><td>11000</td></tr><tr class="person-row"><td>Специалист архива РКиТД БКЦ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 30</td><td>11000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Производственно-диспетчерский отдел по судостроению</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 7</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Начальник отдела</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 31</td><td>90000</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 32</td><td>23000</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 33</td><td>23000</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 34</td><td>23000</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 35</td><td>23000</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 36</td><td>24000</td></tr><tr class="person-row"><td>Диспетчер ПДО по судостроению</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 37</td><td>23000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Отдел Судоремонта		
+</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Производственно-диспетчерский отдел по судоремонту. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 3</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Производственно-диспетчерский отдел по судоремонту. Специалист-диспетчер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td><td>32000</td></tr><tr class="person-row"><td>Производственно-диспетчерский отдел по судоремонту. Специалист-диспетчер</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td><td>31000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел эксплуатации наземного транспорта. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 3</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Отдел эксплуатации наземного транспорта. Табельщик</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td><td>14000</td></tr><tr class="person-row"><td>Отдел эксплуатации наземного транспорта. Специалист-диспетчер по транспорту</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td><td>24000</td></tr><tr class="person-row"><td>Отдел эксплуатации наземного транспорта. Специалист-диспетчер по транспорту</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>24000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел эксплуатации флота. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 2</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Отдел эксплуатации флота. Специалист-диспетчер по флоту</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 6</td><td>35000</td></tr><tr class="person-row"><td>Отдел эксплуатации флота. Специалист-диспетчер по флоту</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>35000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Отдел Безопасности
+</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Отдел режима и защиты информации. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 2</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Отдел режима и защиты информации. Специалист отдела режима</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>15000</td></tr><tr class="person-row"><td>Отдел режима и защиты информации. Специалист отдела режима</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>15000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Экономика и финансы</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Финансово-экономический отдел. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 4</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Финансово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Финансово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Финансово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Планово-экономический отдел. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 6</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Планово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Планово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Планово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Планово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Планово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>25000</td></tr><tr class="person-row"><td>Планово-экономический отдел. Специалист-экономист</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 7</td><td>20000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Технический отдел</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Конструкторско-технологический отдел. Начальник отдела</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в отделе: 6</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Инженер-конструктор 3D</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td><td>30000</td></tr><tr class="person-row"><td>Инженер-конструктор 3D</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td><td>30000</td></tr><tr class="person-row"><td>Инженер-конструктор 3D</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td><td>30000</td></tr><tr class="person-row"><td>Инженер-конструктор 2D</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td><td>20000</td></tr><tr class="person-row"><td>Инженер-конструктор 2D</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>20000</td></tr><tr class="person-row"><td>Инженер-конструктор 2D</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 6</td><td>20000</td></tr></tbody></table></ul></li></ul><div class="TaskWorkShop workshop-title1"><div class="icon-and-text"><img class="arrow-picture" src="../../img/Arrowdown.png"/><p class="TaskBasicText icon-text">Инженерный отдел отдел</p></div></div><ul class="projects1"><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Участок инженерных сетей и насосных станций</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в участке: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Заместитель Главного энергетика</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 2</td><td>70000</td></tr><tr class="person-row"><td>Главный энергетик</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 1</td><td>120000</td></tr><tr class="person-row"><td>Специалист. Терминал ТОиР</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 3</td><td>30000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Энергетическая служба</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в службе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Специалист. Терминал  АСКУЭ/АСТУЭ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 4</td><td>25000</td></tr></tbody></table></ul></li><li class="project1"><div class="TaskWorkShopList projects_name_list"><div class="icon-and-text"><img alt="Arrowdown" class="arrow-picture" src="../../img/Arrowdown.png"/></div><p class="TaskBasicText Brigade-text">Энергетическая служба БКЦ</p><p class="TaskBasicText Brigade-Count">Количество сотрудников в службе: 1</p></div><ul class="sub-projects1"><table class="employee-table"><thead><tr><th>Должность</th><th>Статус</th><th>Табельный номер</th><th>Премия</th></tr></thead><tbody><tr class="person-row"><td>Специалист. Терминал РАСКУЭ/АСТУЭ</td><td class="highlight-green"><span>Работает</span></td><td>Табельный номер 5</td><td>32500</td></tr></tbody></table></ul></li></ul></div>
+</div>
+<!--Конец контейнера виджетов -->
+<!-- чат -->
+<div class="resizable-widget" id="widgetChat">
+<div class="widget-header">
+<span class="blockName">Чат</span>
+<button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+<button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+<button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+</div>
+<div class="person-selector">
+<div class="persons">
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Виталий Алексеевич</span>
+<div class="unread-badge">3</div> <!-- Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Дмитрий Викторович</span>
+<div class="unread-badge">53</div>
+</button>
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+<div class="unread-badge">34</div> <!-- Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+</button>
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+<div class="unread-badge">4</div>
+</button>
+<button class="button person-selector-button active-person" id="john-selector">
+<img alt="Аватар Виталия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+<div class="unread-badge">11</div> <!-- Это серый овал с цифрой -->
+</button>
+<button class="button person-selector-button" id="jane-selector">
+<img alt="Аватар Дмитрия" src="../../img/avatar.png"/>
+<span>Иван Иванов</span>
+</button>
+</div>
+<div class="chat-container">
+<div class="chat-messages">
+<div class="message">
+<div class="message-avatar">
+<img src="../../img/avatar.png"/>
+</div>
+<div class="message-content">
+<div class="message-sender"> Виктор</div>
+<div class="message-text">Приветики</div>
+<div class="message-timestamp">19.42.42</div>
+</div>
+</div>
+</div>
+<form class="chat-input-form">
+<input class="chat-input" placeholder="Введите сообщение" required="" type="text"/>
+<button class="button send-button" type="submit">Отправить</button>
+</form>
+</div>
+</div>
+<div class="resize-handle"></div>
+</div>
+</div>
+<!--Конец чата-->
+<!--Футор-->
+<div class="footer">
+<div class="footer-content">
+<div class="footer-logo">
+<img alt="Логотип" src="../../img/logo.png"/>
+</div>
+<div class="footer-links">
+<ul>
+<li><a href="#">Главная</a></li>
+<li><a href="#">О нас</a></li>
+<li><a href="#">Услуги</a></li>
+<li><a href="#">Контакты</a></li>
+</ul>
+</div>
+<div class="footer-social">
+<!-- <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+      <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+      <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a> -->
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2023. Все права защищены.</p>
+</div>
+</div>
+<!--Футор-->
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="../scripts/buhgalterScript.js"></script>
+<script src="../scripts/chatScript.js"></script>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<!-- <script src="scripts/WorkshopTask.js"></script>  -->
+</link></html>
