@@ -26,8 +26,9 @@
        <div class="widget-dropdown">
          <select id="widget-select" class="horizontal">
           <option value="widget1" >Ежедневник</option>
-           <option value="widget2" >Список сотрудников</option>
-           <option value="widgetChat">Чат</option>
+          <option value="widget2" >Список сотрудников</option>
+          <option value="widget3" >Учёт запросов, отпусков и больничных</option>
+          <option value="widgetChat">Чат</option>
            <!-- Добавьте другие виджеты в виде дополнительных <option> по аналогии -->
          </select>
        </div>
@@ -153,6 +154,142 @@
     </div>
     </div>
 
+    <div class="resizable-widget active-widget" id="widget3">
+      <div class="widget-header">
+      <span class="blockName">Учёт запросов, отпусков и больничных</span>
+      <button class="collapse-button" type="button"><img alt="Collaps" src="../../img/CollapsButton.png"/></button>
+      <button class="uncollapse-button" type="button"><img alt="Collaps" src="../../img/UncollapsButton.png"/></button>
+      <button class="close-button" type="button"><img alt="Close" src="../../img/Close-button.png"/></button>
+      </div>
+      <div class="container">
+        <div class="TaskWorkShop workshop-title1">
+        <div class="icon-and-text">
+        <img class="arrow-picture" src="../../img/Arrowdown.png"/>
+        <p class="TaskBasicText icon-text">Запросы</p>
+        </div>
+        </div>
+        <ul class="projects1">
+          <table class="employee-table">
+          <thead>
+          <tr>
+          <th>ФИО</th>
+          <th>Табельный номер</th>
+          <th>Подразделение</th>
+          <th>Запрос</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="person-row">
+          <td>Панов Тимофей Андреевич</td>
+          <td>719012</td>
+          <td>1F</td>
+          <td class="hrrequest">Запрос</td>
+          </tr>
+          <tr class="person-row">
+          <td>Зверев Артём Ильич</td>
+          <td>830178</td>
+          <td>2B</td>
+          <td class="hrrequest">Запрос</td>
+          </tr>
+          <tr class="person-row">
+          <td>Плотников Степан Маркович</td>
+          <td>194582</td>
+          <td>31G</td>
+          <td class="hrrequest">Запрос</td>
+          </tr>
+          <tr class="person-row">
+          <td>Виноградов Степан Матвеевич</td>
+          <td>178323</td>
+          <td>12A</td>
+          <td class="hrrequest">Запрос</td>
+          </tr>
+          </tbody>
+          </table>
+        </ul>
+
+    <div class="TaskWorkShop workshop-title1">
+      <div class="icon-and-text">
+      <img class="arrow-picture" src="../../img/Arrowdown.png"/>
+      <p class="TaskBasicText icon-text">В отпуске</p>
+      </div>
+      </div>
+      <ul class="projects1">
+        <table class="employee-table">
+        <thead>
+        <tr>
+        <th>ФИО</th>
+        <th>Табельный номер</th>
+        <th>Подразделение</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="person-row">
+        <td>Петровский Михаил Платонович</td>
+        <td>907273</td>
+        <td>4Y</td>
+        </tr>
+        <tr class="person-row">
+        <td>Киселев Никита Маркович</td>
+        <td>789335</td>
+        <td>8G</td>
+        </tr>
+        <tr class="person-row">
+        <td>Егоров Кирилл Львович</td>
+        <td>476458</td>
+        <td>9B</td>
+        </tr>
+        <tr class="person-row">
+        <td>Васильев Михаил Филиппович</td>
+        <td>394837</td>
+        <td>5C</td>
+        </tr>
+        </tbody>
+        </table>
+      </ul>
+
+      <div class="TaskWorkShop workshop-title1">
+        <div class="icon-and-text">
+        <img class="arrow-picture" src="../../img/Arrowdown.png"/>
+        <p class="TaskBasicText icon-text">На больничном</p>
+        </div>
+        </div>
+        <ul class="projects1">
+          <table class="employee-table">
+          <thead>
+          <tr>
+          <th>ФИО</th>
+          <th>Табельный номер</th>
+          <th>Подразделение</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="person-row">
+          <td>Петров Валерий Васильевич</td>
+          <td>486591</td>
+          <td>8D</td>
+          </tr>
+          <tr class="person-row">
+          <td>Панкратов Артём Максимович</td>
+          <td>377728</td>
+          <td>2A</td>
+          </tr>
+          <tr class="person-row">
+          <td>Белов Владимир Арсентьевич</td>
+          <td>758443</td>
+          <td>3F</td>
+          </tr>
+          <tr class="person-row">
+          <td>Грачев Герман Александрович</td>
+          <td>422235</td>
+          <td>7R</td>
+          </tr>
+          </tbody>
+          </table>
+        </ul>
+
+      <div class="resize-handle"></div>
+      </div>
+      </div>
 
 <!--Конец контейнера виджетов -->
   <!-- чат -->
@@ -165,7 +302,6 @@
     <button   type="button" class="close-button"><img src="../../img/Close-button.png" alt="Close"></button>
       </div>
   
-   
         <div class="person-selector">
           <div class="persons">
             <button class="button person-selector-button active-person" id="john-selector">
@@ -236,7 +372,6 @@
       <div class="resize-handle"></div>
     </div>
   </div>
- 
 <!--Конец чата-->
 <!--Футор-->
 <div class="footer">

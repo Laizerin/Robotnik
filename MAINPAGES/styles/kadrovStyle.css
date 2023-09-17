@@ -1508,3 +1508,8 @@ body {
   max-width: calc(100% - 10px);
   transform: none; /* Убираем трансформацию */
 }
+
+.hrrequest{
+  text-align: justify;
+  max-width: 200px;
+}
